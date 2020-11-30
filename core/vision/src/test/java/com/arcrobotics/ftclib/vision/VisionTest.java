@@ -245,8 +245,21 @@ public class VisionTest {
             redRect = ugAngleHighGoalPipeline.getRedRect();
             bluePoint = UGBasicHighGoalPipeline.getCenterofRect(blueRect);
             redPoint = UGBasicHighGoalPipeline.getCenterofRect(redRect);
-            //System.out.println("BluePoint:  " + bluePoint.toString());
-            //System.out.println("RedPoint:   " + redPoint.toString());
+            System.out.println("BluePoint:  " + bluePoint.toString());
+            System.out.println("RedPoint:   " + redPoint.toString());
+
+
+            Double redYaw = ugAngleHighGoalPipeline.calculateYaw(Target.RED,999);
+            Double redPitch = ugAngleHighGoalPipeline.calculatePitch(Target.RED,999);
+            Double blueYaw = ugAngleHighGoalPipeline.calculateYaw(Target.Blue,999);
+            Double bluePitch = ugAngleHighGoalPipeline.calculatePitch(Target.Blue,999);
+            System.out.println("Red Yaw:   " + redYaw.toString());
+            System.out.println("Blue Yaw:   " + blueYaw.toString());
+
+            System.out.printf("Red  ( Yaw , Pitch ):  ( %+5.1f , %+5.1f ) %n", redYaw,redPitch);
+            System.out.printf("Blue ( Yaw , Pitch ):  ( %+5.1f , %+5.1f ) %n", blueYaw,bluePitch);
+            System.out.println("");
+
         }
     }
 
